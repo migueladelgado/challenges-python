@@ -34,5 +34,5 @@ def create_guitar():
     #Realized that I input the notes backwards, so lazily reversing the order
     for fret in guitar: 
         guitar[fret] = list(reversed(guitar[fret]))
-        
+    
     return guitar

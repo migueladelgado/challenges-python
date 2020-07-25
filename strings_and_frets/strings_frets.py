@@ -6,13 +6,13 @@ import guitar as g
 guitar = g.create_guitar()
 
 def string_fret(string, fret):
-    note = guitar[fret][string - 1]
-    if not note:
-        return print('Invalid Input')
-    if string < 1:
+    if string < 1 or string > 6:
         return print('No Such String!!!')
     if fret > 24:
         return print('Not a valid fret!!!')
+    note = guitar[fret][string - 1]
+    if not note:
+        return print('Invalid Input')
     return print(note)
 
 
@@ -21,6 +21,8 @@ string_fret(2, 10) # "A"
 string_fret(0, 16) # "No Such String!!!"
 string_fret(2, 19) # F#/GB
 string_fret(3, 0) # G
+string_fret(7, 3) # "No Such String!!!"
+string_fret(2, 29) # "No Such fret!!!"
 
 
 
